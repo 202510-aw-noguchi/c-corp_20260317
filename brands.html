@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Workshop Top" />
+    <title>Workshop Top - PC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Noto+Sans+JP:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .content {
+            padding-bottom: 48px;
+        }
+
+        .lead-area-pc,
+        .lead-area-sp {
+            max-width: 760px;
+            margin: 30px auto 62px;
+            text-align: center;
+        }
+
+        .lead-area-sp {
+            display: none;
+        }
+
+        .h2-lead-area {
+            max-width: 760px;
+            margin: 34px auto 68px;
+            text-align: center;
+        }
+
+        .img-placeholder {
+            width: 250px;
+            height: 250px;
+            background: var(--placeholder);
+            display: grid;
+            place-items: center;
+            letter-spacing: 0.06em;
+            color: var(--text);
+        }
+
+        .brands-wrap .item-list {
+            width: 100%;
+            max-width: 782px;
+            margin: 0 auto;
+            display: grid;
+            gap: 26px;
+        }
+
+        .brands-wrap .item-list>div {
+            display: block;
+            width: 782px;
+            min-height: 296px;
+            height: auto;
+            padding: 0 18px 0 0;
+            border: 1px solid var(--line);
+            background: #fdfdf9;
+        }
+
+        .brands-wrap .item-list>div::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .brands-wrap .item-list>div img {
+            width: 296px;
+            height: 296px;
+            min-width: 296px;
+            max-width: 296px;
+            min-height: 296px;
+            max-height: 296px;
+            object-fit: cover;
+            display: block;
+            float: left;
+            margin: 0 18px 0 0;
+        }
+
+        .brands-wrap .item-list>div p {
+            margin: 0 0 12px;
+        }
+
+        .brands-wrap .item-list>div p:first-of-type {
+            margin-top: 18px;
+        }
+
+        .brands-wrap .item-list>div p:last-of-type {
+            margin-bottom: 10px;
+        }
+
+        .access {
+            max-width: 920px;
+            margin: 115px auto 0;
+            text-align: center;
+        }
+
+        .access .img-placeholder {
+            width: 100%;
+            max-width: 890px;
+            height: 354px;
+            min-height: 0;
+            margin-top: 16px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .access .img-placeholder iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (min-width: 1281px) {
+            .page {
+                display: block;
+            }
+
+            .content {
+                width: min(1160px, calc(100vw - 280px));
+                margin-left: max(280px, calc((100vw - 1440px) / 2 + 280px));
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .page {
+                display: block;
+                width: 100%;
+            }
+
+            .content {
+                width: 100%;
+                margin-left: 0;
+            }
+
+        }
+
+        @media (max-width: 900px) {
+            .page {
+                display: block;
+                width: 100%;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            .brands-wrap {
+                padding-top: 84px;
+            }
+
+            .lead-area-pc {
+                display: none;
+            }
+
+            .lead-area-sp {
+                display: block;
+            }
+
+            h2 {
+                margin: 58px 0 26px;
+            }
+
+            .lead-area-sp {
+                margin-bottom: 70px;
+            }
+
+            .lead-area-pc,
+            .lead-area-sp,
+            .h2-lead-area,
+            .access .h2-lead-area {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .brands-wrap .item-list {
+                width: 100%;
+                max-width: 362px;
+                gap: 40px;
+            }
+
+            .brands-wrap .item-list>div {
+                width: 100%;
+                max-width: 362px;
+                margin: 0 auto;
+                min-height: 0;
+                height: auto;
+                padding: 0 0 16px;
+                overflow: hidden;
+                text-align: left;
+            }
+
+            .brands-wrap .item-list>div img {
+                width: 361px;
+                min-width: 361px;
+                max-width: 361px;
+                height: 241px;
+                min-height: 241px;
+                max-height: 241px;
+                margin: 0;
+                float: none;
+            }
+
+            .brands-wrap .item-list>div p {
+                margin: 0 0 12px;
+                padding: 0 12px;
+                box-sizing: border-box;
+            }
+
+            .brands-wrap .item-list>div p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .brands-wrap .item-list>div p.copy:last-of-type {
+                text-align: center;
+            }
+
+            .access {
+                max-width: 920px;
+                margin-top: 72px;
+                text-align: center;
+            }
+
+            .access>h2 {
+                margin: 65px 0 34px;
+            }
+
+            .access .img-placeholder {
+                width: 100%;
+                max-width: 890px;
+                height: 230px;
+                min-height: 0;
+                margin-top: 47px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 47px;
+            }
+
+            body {
+                line-height: 1.65;
+            }
+
+            .sp-header {
+                top: 10px;
+            }
+
+            .lead-area-pc,
+            .lead-area-sp,
+            .h2-lead-area {
+                margin: 12px auto 26px;
+            }
+
+            .lead-area-sp {
+                margin-bottom: 70px;
+            }
+
+            .access .img-placeholder {
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <aside class="sidebar"></aside>
+        <main class="content">
+            <div class="sp-header"></div>
+            <div class="sp-drawer" id="sp-drawer"></div>
+
+            <div class="brands-wrap">
+                <section>
+                    <h1>Brands</h1>
+                </section>
+                <section class="lead-area-pc">
+                    <p>香りは、日常の中に静かに寄り添うもの。<br>
+                        私たちは自然や季節の情景から着想を得ながら、日々の時間に心地よく重なる香りを届けています。</p>
+                </section>
+                <section class="lead-area-sp">
+                    <p>
+                    <p>香りは、日常の中に静かに寄り添うもの。<br>
+                        私たちは自然や季節の情景から着想を得ながら、日々の時間に心地よく重なる香りを届けています。</p>
+                </section>
+                <section>
+                    <h2>Recommended</h2>
+                    <div class="h2-lead-area">1年を春夏秋冬の四つの季節に分け、<br>
+                        さらにそれぞれを六つに分けて季節の移ろいを表す伝統的な暦、二十四節気。<br>
+                        光や風、草木の変化など、自然の細やかな変化を感じ取るために人々の暮らしの中で育まれてきました。<br>
+                        この暦に着想を得たフレグランスシリーズ「Solar Terms」。<br>
+                        季節の情景を香りとしてお楽しみください。<br>
+                        <p class="notice">Eau de toilette "Solar Terms"　15000円/30ml *tax included</p>
+                    </div>
+                    <section>
+                        <article class="item-list">
+                            <div>
+                                <img src="image/Spring.png" alt="Solar Terms：清明">
+                                <p class="copy">Solar Terms：清明</p>
+                                <p>やわらかな光が地面を包み、草木が一斉に芽吹くころ。<br>
+                                    空気は澄み、世界は少しだけ明るくなる。</p>
+                                <p>春が本格的に動き出す、清明。<br>
+                                    瑞々しい若葉と花の香りが、新しい季節の始まりを告げる。</p>
+                                <p>朝の光のように透明で軽やかな香り。</p>
+                                <p class="notice">
+                                    Top：ベルガモット、グリーンアップル、レモンブロッサム　Middle：ジャスミン、ミュゲ、ピオニー　Base：ホワイトムスク、シダーウッド、アンバー</p>
+                            </div>
+                            <div>
+                                <img src="image/Summer.png" alt="Solar Terms：夏至">
+                                <p class="copy">Solar Terms：夏至</p>
+                                <p>まぶしい太陽が空を高く照らし、<br>
+                                    世界は光で満たされる。</p>
+                                <p>海風、柑橘の香り、熱を帯びた空気。<br>
+                                    夏至は、生命がもっとも力強く輝く。</p>
+                                <p>太陽の光をそのまま閉じ込めた、鮮やかで開放的な香り。</p>
+                                <p class="notice">
+                                    Top：グレープフルーツ、マンダリン、ライム　Middle：ネロリ、オレンジブロッサム、マリンノート　Base：ペチパー、サンダルウッド、ホワイトアンバー</p>
+                            </div>
+                            <div>
+                                <img src="image/Autumn.png" alt="Solar Terms：白露">
+                                <p class="copy">Solar Terms：白露</p>
+                                <p>夜の涼しさが、少しずつ深まるころ。<br>
+                                    朝の草葉には、静かに露が宿る。</p>
+                                <p>白露は、夏の終わりと秋の始まりが重なる季節。<br>
+                                    澄んだ空気と、穏やかな光。世界が少し静かになる。</p>
+                                <p>透明な朝露のように、落ち着きと深みを感じる香り。</p>
+                                <p class="notice">Top：ペア、ベルガモット、グリーンティー　Middle：ローズ、アイリス、フリージア　Base：ムスク、カシミアウッド、アンバーグリス
+                                </p>
+                            </div>
+                            <div>
+                                <img src="image/Winter.png" alt="Solar Terms：小雪">
+                                <p class="copy">Solar Terms：小雪</p>
+                                <p>空気が冷たく澄み、遠くの山にはうっすらと雪が積もる。</p>
+                                <p>冬の訪れを告げる、小さな雪。<br>
+                                    静かな景色の中に、あたたかな灯りがともる季節。</p>
+                                <p>冷たい空気と、やわらかな温もり。<br>
+                                    冬の始まりを感じる香り。</p>
+                                <p class="notice">
+                                    Top：ピンクペッパー、ベルガモット、ジュニパー　Middle：ローズ、ヘリオトロープ、カルダモン　Base：バニラ、トンカビーンズ、サンダルウッド</p>
+                            </div>
+                            <p class="notice">※通販サイトは準備中のため、店頭でお買い求めください。</p>
+                        </article>
+                    </section>
+                </section>
+                <section class="access">
+                    <h2>Access</h2>
+                    <section class="h2-lead-area">ご来店前に、店舗までのアクセス方法をご確認ください。</section>
+                    <div class="img-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps?q=%E3%80%92110-0015%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8F%B0%E6%9D%B1%E5%8C%BA%E6%9D%B1%E4%B8%8A%E9%87%8E%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%95%E2%88%92%EF%BC%95%20%E6%9B%BD%E6%88%91%E3%83%93%E3%83%AB&output=embed"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map"></iframe>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="footer-pc">
+        <p>静かに、深く、香りと向き合う時間を。 © 2026 c-corp. All Rights Reserved.</p>
+    </footer>
+    <footer class="footer-sp">
+        <p>静かに、深く、香りと向き合う時間を。<br>© 2026 c-corp. All Rights Reserved.</p>
+    </footer>
+    <script src="common-layout.js"></script>
+    <script>
+        (function () {
+            var menuButton = document.querySelector(".sp-menu-btn");
+            var drawer = document.querySelector(".sp-drawer");
+            if (!menuButton || !drawer) return;
+            function isSp() {
+                return window.matchMedia("(max-width: 1280px)").matches;
+            }
+            function closeDrawer() {
+                drawer.classList.remove("is-open");
+                menuButton.setAttribute("aria-expanded", "false");
+            }
+            menuButton.addEventListener("click", function () {
+                if (!isSp()) return;
+                var willOpen = !drawer.classList.contains("is-open");
+                drawer.classList.toggle("is-open", willOpen);
+                menuButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+            });
+            document.addEventListener("click", function (event) {
+                if (!isSp()) return;
+                if (!drawer.classList.contains("is-open")) return;
+                if (drawer.contains(event.target) || menuButton.contains(event.target)) return;
+                closeDrawer();
+            });
+            window.addEventListener("resize", function () {
+                if (!isSp()) {
+                    closeDrawer();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
